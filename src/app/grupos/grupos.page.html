@@ -1,18 +1,14 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="bg-gray-500">Grupos</ion-title>
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <ion-title class="cabeceraPage">Grupos</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <!-- <div>
-    <ion-button (click)="getGrupos()">Mostrar Grupos</ion-button>
-  </div> -->
-  <ion-card class="bg-gray-400">
-    <ion-card-title class="text-center">Grupos de {{nombreGrupo}}</ion-card-title>
-    <ion-card-content class="bg-gray-300" *ngFor="let grupo of gruposList">
-      <ion-item button (click)="navHorario(grupo.nombre)">{{grupo.nombre}}</ion-item>
+  <ion-card class="cabeceraPage">
+    <ion-card-title class="cabeceraPage">Grupos de {{nombreGrupo}}</ion-card-title>
+    <ion-card-content class="contenidoCard" *ngFor="let grupo of gruposList">
+      <ion-item class="botonNav" button (click)="navHorario(grupo.nombre)">{{grupo.nombre}}</ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>

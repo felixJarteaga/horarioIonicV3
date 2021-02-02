@@ -2,9 +2,31 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+
+.horario {
+  border-style: solid;
+  border-color: #B45309;
+  border-width: 1px;
+  text-align: center;
+  background-color: #fde68a;
+  font-size: large;
+}
+.cabeceraPage{
+  text-align: center;
+  background-color:#92400E;
+  font-style: var(--ion-color-tertiary-contrast);
+}
+.contenidoCard{
+  background-color: #FBBF24;
+}
+.botonNav{
+  background-color: #fde68a;
+}
+
+
 :root {
   /** primary **/
-  --ion-color-primary: #3880ff;
+  --ion-color-primary: #92400E;
   --ion-color-primary-rgb: 56, 128, 255;
   --ion-color-primary-contrast: #ffffff;
   --ion-color-primary-contrast-rgb: 255, 255, 255;

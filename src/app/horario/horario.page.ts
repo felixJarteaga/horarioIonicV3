@@ -32,11 +32,8 @@ export class HorarioPage implements OnInit {
   ngOnInit() {}
 
   async getHorasClasesHorario() {
-    // this.horasClasesHorarioList = [];
     await this.datosHorario.getHorasClasesHorario(this.nombreCursoHorario);
     this.horasClasesHorarioList = this.datosHorario.getHorasClaseHorarioList();
-    console.log(this.horasClasesHorarioList);
-    // this.mostrarHorario();
   }
   mostrarHorario() {
     this.primeraFila.add("HORAS");
@@ -54,5 +51,14 @@ export class HorarioPage implements OnInit {
       });
       array.shift();
     } while (array.length > 0);
+  }
+  getNombreAsignatura(hora: string): string[] {
+    let nombreAsignatura: string[] = [];
+    this.horarioOrdenado.forEach((obj: any) => {
+      if (obj.hora === hora) {
+        nombreAsignatura.push(obj.nombreMateria);
+      }
+    });
+    return nombreAsignatura;
   }
 }

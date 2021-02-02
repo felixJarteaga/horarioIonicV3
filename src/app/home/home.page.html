@@ -1,35 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title class="bg-gray-500">
+    <ion-title class="cabeceraPage">
       HORARIO IONIC
     </ion-title>
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <div>
-    <ion-button (click)="copia()">Copiar</ion-button>
-  </div>
-  <div>
-    <ion-button (click)="abrir()">Abrir</ion-button>
-  </div> -->
-  <!-- <div>
-    <ion-button (click)="getHoras()">Horas</ion-button>
-  </div> -->
-  <!-- <div>
-    <ion-button (click)="getEstudios()">Mostrar Estudios</ion-button>
-  </div> -->
-  <!-- <ion-card>
-    <ion-card-title>Horas</ion-card-title>
-    <ion-card-content *ngFor="let hora of horasList">
-      <ion-item button>{{hora.nombre}}</ion-item>
-    </ion-card-content>
-  </ion-card> -->
-  <ion-card class="bg-gray-400">
-    <ion-card-title class="text-center">Estudios</ion-card-title>
-    <ion-card-content class="bg-gray-300" *ngFor="let estudio of estudiosList">
-      <ion-item button (click)="navGrupos(estudio.nombre)">{{estudio.nombre}}</ion-item>
+  <ion-card class="cabeceraPage">
+    <ion-card-title class="cabeceraPage">Estudios</ion-card-title>
+    <ion-card-content class="contenidoCard" *ngFor="let estudio of estudiosList">
+      <ion-item class="botonNav" button (click)="navGrupos(estudio.nombre)">{{estudio.nombre}}</ion-item>
     </ion-card-content>
   </ion-card>
 </ion-content>

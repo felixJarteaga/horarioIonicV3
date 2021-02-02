@@ -1,26 +1,25 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title class="bg-gray-500">Horario</ion-title>
-    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <ion-title class="cabeceraPage">Horario</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item class="text-center">
-    Horario de {{nombreCursoHorario}}
+  <ion-item>
+    <div class="text-center">Horario de {{nombreCursoHorario}}</div>
   </ion-item>
-  <ion-button (click)="mostrarHorario()">Mostrar Horario</ion-button>
+  <ion-button color="primary" (click)="mostrarHorario()">Mostrar Horario</ion-button>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let dia of primeraFila">
         <div>{{dia}}</div>
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let hora of horasSinRepetir">
-      <ion-col>
+    <ion-row class="horario" *ngFor="let hora of horasSinRepetir">
+      <ion-col class="horario">
         <div>{{hora}}</div>
       </ion-col>
-      <ion-col *ngFor="let asig of materia ">{{asig}}</ion-col>
+      <ion-col class="horario" *ngFor="let asig of getNombreAsignatura(hora) ">{{asig}}</ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>

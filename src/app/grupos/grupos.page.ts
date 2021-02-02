@@ -30,7 +30,6 @@ export class GruposPage implements OnInit {
     this.gruposList = [];
     await this.datosHorario.getGrupos(this.nombreGrupo);
     this.gruposList = this.datosHorario.getGruposList();
-    console.log(this.gruposList);
   }
   navHorario(name: string) {
     let extraNavegation: NavigationExtras = {
