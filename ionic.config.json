@@ -1,0 +1,7 @@
+{
+  "name": "HorarioFinal",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
