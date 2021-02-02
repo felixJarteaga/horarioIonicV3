@@ -11,8 +11,8 @@ import { CopyService } from "../share/copy.service";
 })
 export class HorarioPage implements OnInit {
   nombreCursoHorario: string;
-  horasClasesHorarioList: Horario[] = [];
-  horarioOrdenado: Horario[] = [];
+  horasClasesHorarioList: any[] = [];
+  horarioOrdenado: any[] = [];
   horasSinRepetir: Set<string> = new Set<string>();
   primeraFila: Set<string> = new Set<string>();
   materia: string[] = [];
@@ -36,18 +36,18 @@ export class HorarioPage implements OnInit {
     await this.datosHorario.getHorasClasesHorario(this.nombreCursoHorario);
     this.horasClasesHorarioList = this.datosHorario.getHorasClaseHorarioList();
     console.log(this.horasClasesHorarioList);
-    this.mostrarHorario();
+    // this.mostrarHorario();
   }
   mostrarHorario() {
     this.primeraFila.add("HORAS");
-    this.horasClasesHorarioList.map((obj: Horario) => {
+    this.horasClasesHorarioList.map((obj: any) => {
       this.primeraFila.add(obj.dia);
       this.horasSinRepetir.add(obj.hora);
       this.materia.push(obj.nombreMateria);
     });
     let array = Array.from(this.horasSinRepetir);
     do {
-      this.horasClasesHorarioList.map((obj: Horario) => {
+      this.horasClasesHorarioList.map((obj: any) => {
         if (obj.hora === array[0]) {
           this.horarioOrdenado.push(obj);
         }

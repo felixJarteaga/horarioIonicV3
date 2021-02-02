@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title class="bg-gray-500">Horario</ion-title>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
   </ion-toolbar>
 </ion-header>
 
@@ -9,6 +9,7 @@
   <ion-item class="text-center">
     Horario de {{nombreCursoHorario}}
   </ion-item>
+  <ion-button (click)="mostrarHorario()">Mostrar Horario</ion-button>
   <ion-grid>
     <ion-row>
       <ion-col *ngFor="let dia of primeraFila">
@@ -19,7 +20,7 @@
       <ion-col>
         <div>{{hora}}</div>
       </ion-col>
-      <ion-col>*ngFor="let asig of materia "</ion-col>
+      <ion-col *ngFor="let asig of materia ">{{asig}}</ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
